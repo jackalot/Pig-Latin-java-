@@ -2,7 +2,10 @@ import javax.swing.JOptionPane;
 
 public class main {
 	public static String FindTheRestOfTheWord(String Constants, String input) {
-		return input;
+		//Check how many characters are similar(just a double check)
+		int similarChars = 0;
+		String LeftOverWord = input.substring(similarChars);
+		return LeftOverWord;
 	}
 	public static String FindConstant(String input) {
 		String OurConstants = "bcdfghjklmnpqrstvwxyz";
@@ -34,8 +37,8 @@ public class main {
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
-		String TheRest = FindTheRestOfTheWord(OurConstants, input);
-		JOptionPane.showMessageDialog(null, input);
+		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
+		JOptionPane.showMessageDialog(null, LeftOverWord);
 
 	}
 }
