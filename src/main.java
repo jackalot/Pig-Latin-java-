@@ -15,5 +15,7 @@ public class main {
 	 * just add hay, way, or yay
 	 * https://en.wikipedia.org/wiki/Pig_Latin
 	 */
+		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
+		JOptionPane.showMessageDialog(null, input);
 	}
 }
