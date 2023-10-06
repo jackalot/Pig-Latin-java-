@@ -7,6 +7,9 @@ public class main {
 		// like  the P in pig 
 		// or the SM in smile
 		String firstConstants = "";
+		int count = 0;
+		boolean FoundVowel = false;
+		
 		return firstConstants;
 	}
 	public static void main(String[] args) {
