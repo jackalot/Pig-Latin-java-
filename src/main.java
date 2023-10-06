@@ -4,6 +4,17 @@ public class main {
 	public static String FindTheRestOfTheWord(String Constants, String input) {
 		//Check how many characters are similar(just a double check)
 		int similarChars = 0;
+		for(int i = 0; i < Constants.length(); i++)
+		{
+			//Find the character at this index for both strings
+			char InputChar = input.charAt(i);
+			char ConstantChar = Constants.charAt(i);
+			//Compare them, they should be the same
+			if(InputChar == ConstantChar)
+			{
+				similarChars++;
+			}
+		}
 		String LeftOverWord = input.substring(similarChars);
 		return LeftOverWord;
 	}
