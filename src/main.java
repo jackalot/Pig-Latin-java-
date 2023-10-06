@@ -1,5 +1,9 @@
 import javax.swing.JOptionPane;
 public class main {
+	public static String FindConstant(String input)
+	{
+		return input;
+	}
 	public static void main(String[] args) {
 	/**
 	 * CONSTANT RULE
