@@ -6,9 +6,22 @@ public class main {
 		//EX: pig-igpay, lack-acklay, wack-ackpay
 		String ConstRule = "ay"; 
 		//EX:, smack-acksmay smile-ilesmay
-		String ConstClustRule = "ay"; 
+		String ConstClustRule = "ay";
+		// Just add these suffixes
 		String[] VowelRule = {"hay", "way", "yay"};
-		return "hay";
+		String newSuffix = "";
+		System.out.print(OurConstants.length());
+		switch(OurConstants.length())
+		{
+		//Starts with a vowel.
+		case 0:
+			break;
+		case 1:
+			break;
+		case 2:
+			break;
+		}
+		return newSuffix;
 	}
 	public static String FindTheRestOfTheWord(String Constants, String input) {
 		//Check how many characters are similar(just a double check)
@@ -60,7 +73,7 @@ public class main {
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
 		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
 		String OurSuffix = SuffixRule(OurConstants);
-		JOptionPane.showMessageDialog(null, LeftOverWord);
+		JOptionPane.showMessageDialog(null, LeftOverWord + OurSuffix);
 		
 	}
 }
