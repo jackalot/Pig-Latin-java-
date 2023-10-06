@@ -10,7 +10,6 @@ public class main {
 		// Just add these suffixes
 		String[] VowelRule = {"hay", "way", "yay"};
 		String newSuffix = "";
-		System.out.print(OurConstants.length());
 		switch(OurConstants.length())
 		{
 		//Starts with a vowel.
