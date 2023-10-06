@@ -2,7 +2,12 @@ import javax.swing.JOptionPane;
 public class main {
 	public static String FindConstant(String input)
 	{
-		return input;
+		String OurConstants = "bcdfghjklmnpqrstvwxyz";
+		// this is the first few constants,
+		// like  the P in pig 
+		// or the SM in smile
+		String firstConstants = "";
+		return firstConstants;
 	}
 	public static void main(String[] args) {
 	/**
@@ -20,6 +25,9 @@ public class main {
 	 * https://en.wikipedia.org/wiki/Pig_Latin
 	 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
+		String result = FindConstant(input);
+		System.out.print(result);
 		JOptionPane.showMessageDialog(null, input);
+		
 	}
 }
