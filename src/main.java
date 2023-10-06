@@ -1,8 +1,13 @@
 import javax.swing.JOptionPane;
 
 public class main {
-	public static String SuffixRule()
+	public static String SuffixRule(String OurConstants)
 	{
+		//EX: pig-igpay, lack-acklay, wack-ackpay
+		String ConstRule = "ay"; 
+		//EX:, smack-acksmay smile-ilesmay
+		String ConstClustRule = "ay"; 
+		String[] VowelRule = {"hay", "way", "yay"};
 		return "hay";
 	}
 	public static String FindTheRestOfTheWord(String Constants, String input) {
