@@ -15,6 +15,14 @@ public class main {
 		//Starts with a vowel.
 		case 0:
 			int randomNumber = (int)(Math.random()*(-0+VowelRule.length)+0); 
+			if(randomNumber <= VowelRule.length - 1)
+			{
+				newSuffix = VowelRule[randomNumber];
+			}
+			else
+			{
+				newSuffix = VowelRule[0];
+			}
 			break;
 		case 1:
 			newSuffix = OurConstants + ConstRule;
