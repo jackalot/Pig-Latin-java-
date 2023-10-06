@@ -9,7 +9,19 @@ public class main {
 		String firstConstants = "";
 		int count = 0;
 		boolean FoundVowel = false;
-		
+		while(FoundVowel == false && count < input.length())
+		{
+			int result = OurConstants.indexOf(input.charAt(count));
+			if(result > -1)
+			{
+				firstConstants += input.charAt(count);
+			}
+			else
+			{
+				FoundVowel = true;
+			}
+			count++;
+		}
 		return firstConstants;
 	}
 	public static void main(String[] args) {
