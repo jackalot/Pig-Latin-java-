@@ -16,10 +16,13 @@ public class main {
 		case 0:
 			break;
 		case 1:
+			newSuffix = OurConstants + ConstRule;
 			break;
 		case 2:
+			newSuffix = OurConstants + ConstClustRule;
 			break;
 		}
+		
 		return newSuffix;
 	}
 	public static String FindTheRestOfTheWord(String Constants, String input) {
