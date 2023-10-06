@@ -1,6 +1,10 @@
 import javax.swing.JOptionPane;
 
 public class main {
+	public static String SuffixRule()
+	{
+		return "hay";
+	}
 	public static String FindTheRestOfTheWord(String Constants, String input) {
 		//Check how many characters are similar(just a double check)
 		int similarChars = 0;
@@ -43,13 +47,15 @@ public class main {
 		 * CONSTANT RULE move the constant to the end of the word, add -ay
 		 * Example: pig-igpay, lack-acklay, wack-ackpay 
 		 * CONSTANT CLUSTER RULE move the cluster of constants
-		 * to the end, add -ay smack-acksmay smile-ilesmay VOWEL RULE just add hay, way,
+		 * to the end, add -ay smack-acksmay smile-ilesmay
+		 *  VOWEL RULE just add hay, way,
 		 * or yay https://en.wikipedia.org/wiki/Pig_Latin
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
 		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
+		String OurSuffix = SuffixRule(OurConstants);
 		JOptionPane.showMessageDialog(null, LeftOverWord);
-
+		
 	}
 }
