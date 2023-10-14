@@ -87,6 +87,12 @@ public class main {
 				newString += input.charAt(i);
 			}
 		}
+		//In case the last word never gets added,
+		//as there wouldn't be a space for the last word.
+		if(!newString.isEmpty())
+		{
+			FindWords.add(newString);
+		}
 		return FindWords;
 	}
 	public static void main(String[] args) {
