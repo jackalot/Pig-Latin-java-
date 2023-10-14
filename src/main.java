@@ -110,7 +110,6 @@ public class main {
 		for(int i = 0; i < Words.length; i++)
 		{
 			String CurrentWord = Words[i];
-			System.out.println(Words[i]);
 			String OurConstants = FindConstant(CurrentWord); //Stores the first 1-2 constants
 			String LeftOverWord = FindTheRestOfTheWord(OurConstants, CurrentWord);
 			String OurSuffix = SuffixRule(OurConstants);
@@ -122,9 +121,8 @@ public class main {
 			{
 				message += " " +  LeftOverWord + OurSuffix;	
 			}
-			
 		}
 		JOptionPane.showMessageDialog(null, message);
-		
+		System.exit(0);
 	}
 }
