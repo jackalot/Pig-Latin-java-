@@ -81,9 +81,10 @@ public class main {
 		}
 		return Spaces;		
 	}
-	public static ArrayList<String> FindWords(ArrayList<Integer> HasSpaces)
+	public static ArrayList<String> FindWords(ArrayList<Integer> HasSpaces, String input)
 	{
 		ArrayList<String> FindWords = new ArrayList<String>();
+		
 		return FindWords;
 	}
 	public static void main(String[] args) {
@@ -97,7 +98,7 @@ public class main {
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
 		ArrayList<Integer> HasSpaces = FindSpaces(input);
-		ArrayList<String> Words = FindWords(HasSpaces);
+		ArrayList<String> Words = FindWords(HasSpaces, input);
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
 		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
 		String OurSuffix = SuffixRule(OurConstants);
