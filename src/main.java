@@ -100,15 +100,25 @@ public class main {
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
 		String[] Words = FindWords(input).toArray(new String[0]);
+		String message = "";
 		for(int i = 0; i < Words.length; i++)
 		{
 			String CurrentWord = Words[i];
 			System.out.println(Words[i]);
+			String OurConstants = FindConstant(CurrentWord); //Stores the first 1-2 constants
+			String LeftOverWord = FindTheRestOfTheWord(OurConstants, CurrentWord);
+			String OurSuffix = SuffixRule(OurConstants);
+			if(i == 0)
+			{
+				message += LeftOverWord + OurSuffix;	
+			} 
+			else
+			{
+				message += " " +  LeftOverWord + OurSuffix;	
+			}
+			
 		}
-		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
-		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
-		String OurSuffix = SuffixRule(OurConstants);
-		JOptionPane.showMessageDialog(null, LeftOverWord + OurSuffix);
+		JOptionPane.showMessageDialog(null, message);
 		
 	}
 }
