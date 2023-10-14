@@ -1,5 +1,5 @@
 import javax.swing.JOptionPane;
-
+import java.util.ArrayList;
 public class main {
 	public static String SuffixRule(String OurConstants)
 	{
@@ -70,7 +70,8 @@ public class main {
 		}
 		return firstConstants;
 	}
-
+	public static int[] FindSpaces(String input) {
+	}
 	public static void main(String[] args) {
 		/**
 		 * CONSTANT RULE move the constant to the end of the word, add -ay
@@ -81,6 +82,7 @@ public class main {
 		 * or yay https://en.wikipedia.org/wiki/Pig_Latin
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
+		int[] HasSpaces = FindSpaces(input);
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
 		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
 		String OurSuffix = SuffixRule(OurConstants);
