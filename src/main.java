@@ -70,29 +70,19 @@ public class main {
 		}
 		return firstConstants;
 	}
-	public static ArrayList<Integer> FindSpaces(String input) {
-		ArrayList<Integer> Spaces = new ArrayList<Integer>();
-		for(int i = 0; i < input.length(); i++)
-		{
-			if(input.charAt(i) == ' ')
-			{
-				Spaces.add(i);
-			}
-		}
-		return Spaces;		
-	}
-	public static ArrayList<String> FindWords(ArrayList<Integer> HasSpaces, String input)
+	public static ArrayList<String> FindWords(String input)
 	{
 		String newString = "";
 		ArrayList<String> FindWords = new ArrayList<String>();
 		for(int i = 0; i < input.length(); i++)
 		{
+			//Found a space, a new word begins
 			if(input.charAt(i) == ' ')
 			{
 				FindWords.add(newString);
 				newString = "";
 			}
-			else
+			else //Add the current letter, no new word found
 			{
 				newString += input.charAt(i);
 			}
@@ -109,9 +99,7 @@ public class main {
 		 * or yay https://en.wikipedia.org/wiki/Pig_Latin
 		 */
 		String input = JOptionPane.showInputDialog(null, "What message would you like converted to pig latin?");
-		ArrayList<Integer> HasSpaces = FindSpaces(input);
-		ArrayList<String> Words = FindWords(HasSpaces, input);
-		System.out.print(Words);
+		ArrayList<String> Words = FindWords(input);
 		String OurConstants = FindConstant(input); //Stores the first 1-2 constants
 		String LeftOverWord = FindTheRestOfTheWord(OurConstants, input);
 		String OurSuffix = SuffixRule(OurConstants);
